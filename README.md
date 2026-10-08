@@ -26,6 +26,15 @@
 
 ## 安装
 
+**方式一：SkillHub（国内源，推荐）**
+
+```bash
+# 需先安装 SkillHub CLI：curl -fsSL https://skillhub-1388575217.cos.ap-guangzhou.myqcloud.com/install/install.sh | bash
+skillhub install deep-interview --namespace user_79ac54a9 --dir ~/.agents/skills/
+```
+
+**方式二：GitHub**
+
 ```bash
 git clone https://github.com/slatinwine/deep-interview.git
 ```
