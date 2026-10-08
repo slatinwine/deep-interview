@@ -1,5 +1,16 @@
 ---
 name: deep-interview
+slug: deep-interview
+version: 0.1.0
+displayName: 深度采访
+license: MIT
+homepage: https://github.com/slatinwine/deep-interview
+summary: 把 AI 变成记者：从兴趣爱好破冰，漏斗五层逐层深入，原话落盘防丢，最终整理成一问一答的采访长文，用于整理思路或人物侧写。
+tags:
+  - interview
+  - 采访
+  - 人物侧写
+  - agent-skill
 description: 深度采访：AI 作为记者围绕某个主题采访用户本人，从兴趣爱好等轻松话题切入，逐层深入到经历、观点与价值观，边问边把用户原话记录到 transcript 文件，最后整理成一问一答的采访长文（Markdown），可用于整理思路或完成人物侧写。当用户说"采访我""深度采访/访谈我""问我几个问题""聊聊我/聊聊我的 XX""帮我梳理/整理一下思路""给我做个侧写/人物画像"，或想围绕一个主题系统梳理自己的想法与经历时使用——即使没说"采访"两个字，只要用户想进入一问一答的深聊模式就适用。
 ---
 
