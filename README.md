@@ -72,6 +72,8 @@ deep-interview/
 
 首场实测对一位独立开发者做了 17 问深谈——从"在看素书"破冰，到"怎么防止 AI 暴走、毁灭人类"收尾，产出约 4000 字成稿 + 采访手记。实测中暴露的 transcript 追加陷阱（Edit 误将追加写成替换导致静默丢答案）已经以正确写法固化进 SKILL.md。
 
+**[→ 阅读首场采访成稿《从哭成狗到拔电源——一个独立开发者的 AI 九年》](https://slatinwine.github.io/deep-interview/)**
+
 ## License
 
 MIT
