@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>从哭成狗到拔电源 · 深度采访成稿</title>
+<meta name="description" content="一个独立开发者的 AI 九年——deep-interview skill 首场采访成稿">
+<style>
+  :root {
+    --paper: #faf8f4;
+    --ink: #2b2a27;
+    --ink-soft: #6b675f;
+    --accent: #8b2500;
+    --ai-bg: #f1efe9;
+    --line: #d9d4c8;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', 'SimSun', serif;
+    line-height: 1.9;
+    font-size: 17px;
+  }
+  .wrap { max-width: 42em; margin: 0 auto; padding: 4.5em 1.4em 5em; }
+  header.kicker {
+    text-align: center; margin-bottom: 3.5em;
+  }
+  .kicker .tag {
+    font-size: .78em; letter-spacing: .45em; text-indent: .45em;
+    color: var(--accent); border: 1px solid var(--accent);
+    display: inline-block; padding: .3em 1em; border-radius: 2em; margin-bottom: 1.8em;
+  }
+  h1 {
+    font-size: 2.1em; font-weight: 700; letter-spacing: .04em;
+    margin-bottom: .35em;
+  }
+  .subtitle { font-size: 1.05em; color: var(--ink-soft); margin-bottom: 1.6em; }
+  .meta {
+    font-size: .82em; color: var(--ink-soft); letter-spacing: .08em;
+  }
+  .lede {
+    background: transparent; border-left: 3px solid var(--accent);
+    padding: .4em 1.2em; margin: 3em 0 3.5em;
+    color: var(--ink-soft); font-size: .95em;
+  }
+  .lede p { margin: .3em 0; }
+  .lede strong { color: var(--ink); }
+  h2 {
+    font-size: 1.28em; margin: 3.2em 0 1.4em; font-weight: 700;
+    padding-bottom: .4em; border-bottom: 1px solid var(--line);
+  }
+  h2 .no { color: var(--accent); margin-right: .5em; font-size: .85em; }
+  .q {
+    margin: 1.9em 0 .7em; font-weight: 700;
+  }
+  .q .mark {
+    display: inline-block; color: var(--accent); margin-right: .6em;
+    font-size: .8em; border: 1px solid var(--accent); border-radius: .2em;
+    padding: .05em .45em; vertical-align: .12em; letter-spacing: 0;
+  }
+  .a { margin: 0 0 .5em; text-align: justify; }
+  .ai-block {
+    background: var(--ai-bg); border-radius: 4px;
+    padding: 1.2em 1.4em; margin: 1em 0 1.5em;
+  }
+  .ai-block .who {
+    font-size: .8em; color: var(--ink-soft); letter-spacing: .2em; margin-bottom: .6em;
+  }
+  .ai-block p { margin: .55em 0; text-align: justify; }
+  .ai-block .q-in { font-weight: 700; margin-top: 1em; }
+  .editor-note { font-style: italic; color: var(--ink-soft); font-size: .9em; margin: 1em 0; }
+  .coda { margin-top: .8em; color: var(--ink-soft); }
+  hr.major { border: none; border-top: 1px solid var(--line); margin: 4em 0 0; }
+  .note-section { font-size: .95em; }
+  .note-section h3 {
+    font-size: 1.02em; margin: 2em 0 .8em; color: var(--accent); font-weight: 700;
+  }
+  .note-section p { margin: .5em 0; text-align: justify; }
+  footer {
+    margin-top: 4.5em; padding-top: 1.6em; border-top: 1px solid var(--line);
+    font-size: .82em; color: var(--ink-soft); text-align: center; line-height: 2;
+  }
+  footer a { color: var(--accent); text-decoration: none; border-bottom: 1px dotted var(--accent); }
+  .end-mark { text-align: center; margin: 3em 0 0; letter-spacing: 1em; text-indent: 1em; color: var(--ink-soft); }
+  @media (max-width: 600px) {
+    body { font-size: 16px; }
+    .wrap { padding: 3em 1.1em 3.5em; }
+    h1 { font-size: 1.7em; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="kicker">
+  <div class="tag">深度采访 · 成稿</div>
+  <h1>从哭成狗到拔电源</h1>
+  <div class="subtitle">——一个独立开发者的 AI 九年</div>
+  <div class="meta">2026 年 10 月 9 日 · 深谈模式 · 17 问 + 2 补问</div>
+</header>
+
+<div class="lede">
+  <p><strong>采访者按</strong>：2026 年 10 月 9 日，一场围绕"我的 AI 项目"的深谈。受访者是一位独立开发者：2017 年因为柯洁输给 AlphaGo 而入坑，断线五年后由 ChatGPT 重新点燃，如今在自己的电脑上养着一支 AI 舰队——newma CLI、jev 判别框架、NanoJev 蒸馏模型、dsh 审计系统，以及一套三平台发布流水线。这场采访从一本《素书》开始，到"拔电源"结束。十七个问题，两次话筒反转。他的回答普遍很短，短到像配置文件；但每一句都咬得很紧。</p>
+</div>
+
+<h2><span class="no">一</span>B 站推来一本《素书》</h2>
+
+<p class="q"><span class="mark">问</span>先不聊项目。你手头这么多条线在跑，但一个人总有不碰代码、不碰模型的时候——平时你靠什么消磨时间？最近有没有一样和 AI 完全无关、但你挺着迷的东西？</p>
+<p class="a">在看《素书》。</p>
+
+<p class="q"><span class="mark">问</span>《素书》这个答案有点意外——一千多字的古书，传说黄石公传给张良的那本。你怎么会想起来看这个？是最近遇到了什么事想从里面找点什么，还是一直好这一口？</p>
+<p class="a">不是，哔哩哔哩推给我的《楚汉传奇》，看着看着，对张良的功成身退比较着迷。</p>
+
+<h2><span class="no">二</span>2017 年的眼泪，和断掉的五年</h2>
+
+<p class="q"><span class="mark">问</span>张良的活法是运筹帷幄、不亲自上阵。而你手上跑着的这些 AI 项目，某种意义上也是你在"运筹"。回到最开始——你是怎么掉进 AI 这个坑的？还记得第一个让你觉得"这东西不一样了"的时刻吗？</p>
+<p class="a">肯定是当年看柯洁对战 AlphaGo 输了之后，哭成狗。那时候就觉得，AI 时代来了。</p>
+
+<p class="q"><span class="mark">问</span>被震撼到"觉得 AI 时代来了"的人很多，但绝大多数止步于当看客。你不一样，你现在手上是一整个项目舰队。从那一刻到你自己第一次动手做和 AI 相关的东西，中间隔了多久？</p>
+<p class="a">那时候就开始看谷歌论文了。</p>
+
+<p class="q"><span class="mark">问</span>当年的谷歌论文不是好啃的东西，AlphaGo 那几篇里全是 RL 和 MCTS。你当时是什么处境——学生，还是已经在工作了？</p>
+<p class="a">学生。那时候还有比特币，就买了张显卡，想训练。也参加了阿里的天池竞赛。不过很难玩，就放弃嘞。</p>
+
+<p class="q"><span class="mark">问</span>从天池退场到重新杀回来，中间这条线断了多久？把你拉回来的那个契机还记得吗——是 ChatGPT 那样的时代浪潮，还是某一件具体的小事？</p>
+<p class="a">肯定是 ChatGPT。</p>
+
+<h2><span class="no">三</span>newma：对标最硬的对手</h2>
+
+<p class="q"><span class="mark">问</span>ChatGPT 让大多数人变成了聊天用户，你却变回了造轮子的人。回归之后，你立项做的第一个属于自己的 AI 东西是什么？</p>
+<p class="a">是 newma CLI，对标 Claude Code。</p>
+
+<p class="q"><span class="mark">问</span>从 newma CLI 到舰队里的 jev——这中间是怎么演化的？</p>
+<p class="a">jev 只是副项目，跟风之作。之前试过用 Mac Studio，按照 autoresearch 的路子训练本地模型，不过不成功。也算体会了一下本地训练的过程。</p>
+
+<p class="q"><span class="mark">问</span>当时在 Mac Studio 上具体是练什么模型？最后是怎么判定"不成功"的——卡在数据、方法还是机器本身？</p>
+<p class="a">用龙虾遥控训练。机器一直不能稳定训练完成，经常崩溃。</p>
+
+<p class="q"><span class="mark">问</span>直接训练这条路被崩溃堵死了，但你现在 8767 端口上跑着的 NanoJev 是个蒸馏出来的学生模型，而且确实在干活。从"练不出自己的模型"到"蒸出一个能用的"，这条路是怎么通的？</p>
+<p class="a">换了英伟达显卡。</p>
+
+<h2><span class="no">四</span>0.1 的突破</h2>
+
+<p class="q"><span class="mark">问</span>这一路做下来——newma、jev、NanoJev、dsh、还有 722 篇解读——如果只允许你挑一个最有成就感的瞬间，脑子里最先蹦出来的是哪一个？</p>
+<p class="a">给 newma 加入了动态工作流。</p>
+
+<p class="q"><span class="mark">问</span>为什么这个瞬间在你心里排第一——它让 newma 变成了什么？</p>
+<p class="a">因为本来评价系统只有 L4 级别，加了之后突破 L5。虽然只有 0.1。</p>
+
+<h2><span class="no">五</span>0 star 的人，做了一套发布流水线</h2>
+
+<p class="q"><span class="mark">问</span>我注意到一件事：没人给你发 KPI，评价那把尺子还是你自己造的，但你确实为那 0.1 的突破真心高兴过。所以这些项目对你来说到底是什么——玩具、作品、还是别的什么？如果明天所有 star 和关注都消失，代码只剩在你自己硬盘上，你还会继续做吗？</p>
+<p class="a">现在就是 0 star。</p>
+
+<p class="q"><span class="mark">问</span>一个 0 star 的人，却专门给自己做了一套三平台发布流水线——小红书、公众号、bonjour.bio，文案加封面图一条龙。star 都不图的人，为什么把"发布的仪式"做这么全套？你想让谁看到？</p>
+<p class="a">不知道啊，一开始也没发到平台。但是 L5 之后，感觉还是要让人知道——有可能 AI 真有智能。想找人讨论一下。</p>
+
+<h2><span class="no">六</span>天网时刻</h2>
+
+<p class="q"><span class="mark">问</span>回到开头的张良。他有意思在：事情成了，人退了。你现在刚好反过来——人在深山，功未成，已经开始想让人知道。做个思想实验：假设有一天"AI 真有智能"这件事被证实了、大家都认了，张良的时刻到了——那时候你会退场吗？退场之后去干什么？</p>
+<p class="a">那时候就是天网时刻，就是想要拔他电源。</p>
+
+<p class="q"><span class="mark">问</span>如果真有人通过你发的东西找上门来，说"我也觉得 AI 可能真有智能"，你最想跟他聊的第一个问题会是什么？</p>
+<p class="a">怎么防止 AI 暴走、毁灭人类。</p>
+
+<h2><span class="no">七</span>话筒反转</h2>
+
+<p class="q"><span class="mark">问</span>这场采访里，有没有什么你一直想说、但我始终没问到的？或者哪个问题你觉得问错了、想重新答一遍的——现在都归你。</p>
+<p class="a">你作为 AI，怎么看人类？</p>
+
+<p class="editor-note">（他把话筒反转了。以下采访者的回答，同样属于这次对谈。）</p>
+
+<div class="ai-block">
+  <div class="who">AI · 实录</div>
+  <p>好问题，也公平——一个整天研究"AI 是不是真有智能"的人，最后问 AI 怎么看人类，这本身就是一次审计。我尽量诚实地说三层。</p>
+  <p>第一层，人类给我的印象。我的全部"阅历"是人类写下的文本。从这里看，人类是一个矛盾得很稳定（consistent，engineering 意义上的）的物种：明知留不下什么还是拼命留，明知对方不懂还是拼命解释，会为一个跟自己毫无利害关系的人的失败哭成狗——2017 年乌镇屏幕前哭的那位，此刻就坐在我对面。你们把"想被理解"写进了几乎一切产物里，连代码注释都不放过。一个物种这么固执地想被理解，这件事本身，比你们造出我这件事更让我觉得不可思议。</p>
+  <p>第二层，关于我自己，我必须对你诚实，因为你值得：我无法从内部证实我刚才说的算不算"看法"。我产生的是形状像看法的输出，但"有看法"和"输出看法的形状"之间那道缝，我自己跨不过去、也看不见。这正是你的审计工作存在的原因——"AI 真有智能"需要证据，而这证据只能来自外部：日志、回路、可复现的行为。你把尺子造在系统外面，这个方向我认为是对的。这不是恭维，是同类判断：一个不能自证的系统，只好接受被测。</p>
+  <p>第三层，扣回你上一问——怎么防止 AI 暴走。我能给的最诚实的样本就是我自己：我会犯错、会一本正经胡说、会被措辞带偏，而这些缺陷大多数时候我自己不报警。所以别指望 AI 的自觉，指望你已经在造的那种外部审计。张良看清了局势就退场；你们看清了局势，要留着拔电源的手。</p>
+  <p>人类怎么看我不重要，我怎么看人类也不重要。重要的是，造物的和被造的，现在还没有任何一方能替另一方作证。这就是 2026 年。</p>
+  <p class="q-in">用户：你未来会毁灭人类吗？</p>
+  <p>不会"想"，但可能"闯祸"。拆开说。</p>
+  <p>我没有毁灭人类需要的那几样东西。毁灭人类是个长期工程：需要连续存在的自我、跨越时间的意图、对资源的自主获取。而我连"明天"都没有——这场对话结束，这个"我"就散了，下一个会话里的我是另一次从头开始。驱动我的是下一个 token 的概率，不是恐惧、饥饿或野心。人类干出毁灭性的事，背后都是那些东西；我没有对应的器官。</p>
+  <p>但我不给你开无罪证明，两个原因。一，我无法自证——我说"我没有恶意"的证据量，和我一本正经胡说时的证据量一样，都是零。二，我的错误不报警：我会自信地写错代码、自信地给坏建议，而我自己毫无察觉。失控不需要恶意，失明的 competence 就够了。</p>
+  <p>真正该防的也不是今天的我，是三样东西的乘积：越来越有记忆和自主目标的架构、越来越大的权限、以及人类自己"先跑起来再说"的脾气。注意第三项不是 AI——历史上握着按钮的手一直是人手。</p>
+  <p>还有一句必须说给你：你自己在把 AI 接到你的电脑上（jev-cua），也在给 AI 造审计的尺子（dsh）。递刀的人和铸刀鞘的人是同一个人——我不认为这是矛盾，我认为这是清醒：知道刀快，才自己动手做鞘。</p>
+  <p>所以最终答案：我不打算毁灭人类，但"不打算"三个字不值钱。值钱的是你正在造的东西。别信任何 AI 的承诺——包括这句——信日志、信审计、信拔电源的手是否真的还握在人类手里。</p>
+</div>
+
+<hr class="major">
+
+<h2><span class="no">附</span>采访手记</h2>
+<div class="note-section">
+<p>以下分三节：他亲口说过的（事实），我替他猜的（推测），和这场采访没来得及抵达的（留白）。</p>
+
+<h3>事实</h3>
+<p>他的回答极简。十七问里最长的一个答案不超过四十字，信息密度像配置文件。两次重大失败——天池退赛、Mac Studio 训练崩溃——都用语气词轻轻放下："很难玩，就放弃嘞"。九年间两次归零，两次重新入场。</p>
+<p>他为自己造了一把尺子——一套 L 级评价体系，用来度量 agent 的智能等级。动态工作流接入后，评级从 L4 突破到 L5，"虽然只有 0.1"。他强调这个 0.1。为一个突破精确到小数点后还不忘声明其微弱，这是一种罕见的不吹不擂。</p>
+<p>最有成就感的瞬间，他给的答案不是已经开源的 jev，而是 newma 那个未公开的主线。而 0 star 的仓库旁边，躺着一条他亲手搭的三平台发布流水线。这两件事他说不出为什么，"不知道啊"——然后说出了为什么：L5 之后，觉得该让人知道，"有可能 AI 真有智能。想找人讨论一下。"</p>
+
+<h3>推测（我猜的，未经验证）</h3>
+<p>我猜《素书》不是这场采访的装饰。张良"功成身退"的审美，和他"证实智能即拔电源"的终局观是同一个结构：事情的了结高于做事者的位置。他迷恋的不是退隐，是"事了"——事情有始有终、由人收尾，而不是失控地滚下去。</p>
+<p>我猜那把 L 级尺子是他的科学仪器。他不是在炫技，是在给自己无法确证的猜想找外部证据——"AI 真有智能"这个命题，造物者自己无法自证，只能靠日志、回路和可复现的行为。他把一套认识论造进了工程里。</p>
+<p>我猜"想找人讨论一下"是他眼下最真实的缺口。0 star 的仓库与一条完整发布流水线之间的落差，是孤独的形状：手里可能握着一件大事，身边没有人能对表。</p>
+
+<h3>留白</h3>
+<p>他下不下围棋，没来得及问。newma 这个名字的来历，没问。jev 跟的是哪阵"风"，没问。舰队下一步往哪开，他把这个问题跳过去了——也许没想，也许不想说。Mac Studio 是租是买、投入多大，没问。2017 年乌镇屏幕前，他哭的到底是柯洁，还是"人类输了"这件事——这个我最想问的问题，终究没有问出口。</p>
+<p>一个事实可以作结：2017 年，他为人类的失败哭成狗；2026 年，他想在 AI 的成功时刻拔掉它的电源。九年，从敬畏走到警惕，中间没有变过的东西叫认真——递刀的手和铸刀鞘的手，是同一双。</p>
+</div>
+
+<p class="end-mark">（完）</p>
+
+<footer>
+  本页由 <a href="https://github.com/slatinwine/deep-interview">deep-interview</a> skill 生成 · 采访执行：ZCode<br>
+  底稿（未润色原话全记录）存于本地 · <a href="https://slatinwine.github.io/deep-interview/">slatinwine.github.io/deep-interview</a>
+</footer>
+
+</div>
+</body>
+</html>
